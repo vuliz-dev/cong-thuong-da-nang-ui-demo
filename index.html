@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danangtrade | Sàn thương mại điện tử OCOP Đà Nẵng</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container container-flex">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-phone"></i> 1900 6868</span>
+                <span><i class="fa-solid fa-envelope"></i> contact@danangtrade.gov.vn</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#">Cho doanh nghiệp</a>
+                <a href="#">Dành cho cá nhân</a>
+                <a href="#"><i class="fa-solid fa-globe"></i> Tiếng Việt</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container container-flex">
+            <div class="logo">
+                <img src="https://via.placeholder.com/180x40/FF6B00/FFFFFF?text=DANANGTRADE" alt="Danangtrade Logo">
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm, thương hiệu bạn muốn...">
+                <button><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+            </div>
+
+            <div class="header-actions">
+                <div class="action-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tài khoản</span>
+                </div>
+                <div class="action-item cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                    <span>Giỏ hàng</span>
+                </div>
+                <button class="btn-sell">Đăng ký bán hàng</button>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="active">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm OCOP</a></li>
+                    <li><a href="#">Đặc sản vùng miền</a></li>
+                    <li><a href="#">Thủ công mỹ nghệ</a></li>
+                    <li><a href="#">Tin tức & Sự kiện</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Full Width Hero Carousel -->
+        <section class="hero-slider" id="main-hero">
+            <div class="hero-wrapper">
+                <!-- Slide 1 -->
+                <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('danangtrade_hero_premium_1776261057249.png');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <span class="badge">Sản phẩm tiêu biểu OCOP</span>
+                            <h1>Đặc sản Đà Nẵng - Từ trái tim đến mọi nhà</h1>
+                            <p>Khám phá danh mục sản phẩm OCOP đạt tiêu chuẩn chất lượng cao, mang đậm nét văn hóa và tinh hoa của thành phố Đà Nẵng.</p>
+                            <div class="hero-btns">
+                                <a href="#" class="btn-primary">Mua ngay</a>
+                                <a href="#" class="btn-secondary-white">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('media__1776260285239.png');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <span class="badge">Khuyến mãi cực sốc</span>
+                            <h1>Ưu đãi lớn cho sản phẩm Làng nghề</h1>
+                            <p>Hỗ trợ doanh nghiệp địa phương quảng bá tinh hoa thủ công mỹ nghệ Non Nước đến bạn bè quốc tế.</p>
+                            <div class="hero-btns">
+                                <a href="#" class="btn-primary">Xem khuyến mãi</a>
+                                <a href="#" class="btn-secondary-white">Khám phá ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Controls -->
+            <button class="hero-nav prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="hero-nav next"><i class="fa-solid fa-chevron-right"></i></button>
+            
+            <div class="hero-dots">
+                <span class="h-dot active"></span>
+                <span class="h-dot"></span>
+            </div>
+        </section>
+
+        <!-- Category Slider -->
+        <section class="categories section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Danh mục nổi bật</h2>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev" id="cat-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next" id="cat-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="category-slider-wrapper">
+                    <div class="category-grid" id="category-slider">
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+                            <span>Sản phẩm OCOP</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
+                            <span>Thực phẩm - Đồ uống</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-gem"></i></div>
+                            <span>Trang sức - Phụ kiện</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-shirt"></i></div>
+                            <span>May mặc - Thời trang</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-couch"></i></div>
+                            <span>Nội thất - Gỗ</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-spa"></i></div>
+                            <span>Làm đẹp - Sức khỏe</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-kitchen-set"></i></div>
+                            <span>Đồ gia dụng</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-vial-circle-check"></i></div>
+                            <span>Hóa mỹ phẩm</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-gift"></i></div>
+                            <span>Quà tặng - Lưu niệm</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-pepper-hot"></i></div>
+                            <span>Gia vị - Đặc sản</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-seedling"></i></div>
+                            <span>Nông sản sạch</span>
+                        </div>
+                        <div class="category-item">
+                            <div class="icon-box"><i class="fa-solid fa-fish-fins"></i></div>
+                            <span>Hải sản khô</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Slider -->
+        <section class="featured-products section-padding gray-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sản phẩm tiêu biểu của Đà Nẵng</h2>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev" id="prod-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next" id="prod-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-slider-wrapper">
+                    <div class="product-grid" id="product-slider">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="ocop_honey_premium_1776261116298.png" alt="Mật ong rừng">
+                                <span class="badge-ocop">OCOP 4★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Mật ong rừng nguyên chất</h3>
+                                <div class="price">
+                                    <span class="current-price">250.000đ</span>
+                                    <span class="old-price">300.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(124)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="ocop_lotus_tea_1776261162473.png" alt="Trà sen">
+                                <span class="badge-ocop">OCOP 5★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Trà sen đặc sản Đà Nẵng</h3>
+                                <div class="price">
+                                    <span class="current-price">180.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <span>(89)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="media__1776262256286.png" alt="Sản phẩm 3">
+                                <span class="badge-ocop">OCOP 3★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Nước mắm Nam Ô truyền thống</h3>
+                                <div class="price">
+                                    <span class="current-price">120.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(45)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="media__1776262256286.png" alt="Sản phẩm 4">
+                                <span class="badge-ocop">OCOP 4★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Chả bò Đà Nẵng loại 1</h3>
+                                <div class="price">
+                                    <span class="current-price">350.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(210)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="media__1776262256286.png" alt="Sản phẩm 5">
+                                <span class="badge-ocop">OCOP 4★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Bánh khô mè Cẩm Lệ</h3>
+                                <div class="price">
+                                    <span class="current-price">45.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(67)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="media__1776262256286.png" alt="Sản phẩm 6">
+                                <span class="badge-ocop">OCOP 5★</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>Rượu cần Phú Túc</h3>
+                                <div class="price">
+                                    <span class="current-price">220.000đ</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(34)</span>
+                                </div>
+                                <button class="btn-add-cart">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions Section -->
+        <section class="promotions section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Khuyến mãi nổi bật</h2>
+                </div>
+                <div class="promo-banners">
+                    <div class="promo-card" style="background: linear-gradient(135deg, #FF6B00, #FFBB00);">
+                        <div class="promo-text">
+                            <h3>Giảm giá cuối tuần</h3>
+                            <p>Giảm đến 50% cho các mặt hàng nông sản sạch.</p>
+                            <a href="#" class="btn-white">Khám phá</a>
+                        </div>
+                    </div>
+                    <div class="promo-card" style="background: linear-gradient(135deg, #00BFA5, #26A69A);">
+                        <div class="promo-text">
+                            <h3>Sản phẩm làng nghề</h3>
+                            <p>Ưu đãi đặc biệt cho thủ công mỹ nghệ Non Nước.</p>
+                            <a href="#" class="btn-white">Xem ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news section-padding gray-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Thông tin - Sự kiện - Thông báo</h2>
+                    <a href="#" class="view-all">Tất cả tin tức</a>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://via.placeholder.com/400x250/EEEEEE/999999?text=Sự kiện Danang" alt="News">
+                        </div>
+                        <div class="news-content">
+                            <span class="date">15 Tháng 4, 2024</span>
+                            <h3>Hội chợ Xúc tiến Thương mại Sản phẩm OCOP 2024</h3>
+                            <p>Sự kiện quy tụ hơn 200 gian hàng với các sản phẩm đặc trưng từ khắp các quận huyện...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-inner">
+                    <div class="newsletter-text">
+                        <h3>Đăng ký nhận bản tin</h3>
+                        <p>Nhận thông tin cập nhật về sản phẩm mới và các chương trình khuyến mãi sớm nhất.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Địa chỉ email của bạn...">
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="https://via.placeholder.com/180x40/FF6B00/FFFFFF?text=DANANGTRADE" alt="Logo">
+                    <p>Sàn giao dịch thương mại điện tử trực thuộc Sở Công Thương TP. Đà Nẵng. Hỗ trợ doanh nghiệp địa phương và quảng bá đặc sản vùng miền.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Về Danangtrade</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Quy chế hoạt động</a></li>
+                        <li><a href="#">Điều khoản giao dịch</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Quy định với người mua</a></li>
+                        <li><a href="#">Quy định với người bán</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Liên hệ</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Tầng 13, Trung tâm Hành chính Đà Nẵng, 24 Trần Phú, Đà Nẵng</p>
+                    <p><i class="fa-solid fa-phone"></i> 0236 3 888 888</p>
+                    <p><i class="fa-solid fa-envelope"></i> sct@danang.gov.vn</p>
+                    <img src="https://via.placeholder.com/120x45/CC0000/FFFFFF?text=Đã Đăng Ký" alt="BCT">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Danangtrade. Copyright by Sở Công Thương TP. Đà Nẵng.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
