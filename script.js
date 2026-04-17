@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Resume animation after a short delay
             setTimeout(() => {
                 posterTrack.style.transform = '';
-                posterTrack.style.animation = 'posterScroll 40s linear infinite';
+                posterTrack.style.animation = 'posterScroll 80s linear infinite';
             }, 100);
         });
 
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Resume animation after a short delay
             setTimeout(() => {
                 posterTrack.style.transform = '';
-                posterTrack.style.animation = 'posterScroll 40s linear infinite';
+                posterTrack.style.animation = 'posterScroll 80s linear infinite';
             }, 100);
         });
     }
