@@ -134,37 +134,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const posterTrack = document.querySelector('.poster-carousel-track');
     const posterPrev = document.querySelector('.poster-prev');
     const posterNext = document.querySelector('.poster-next');
+    const posterContainer = document.querySelector('.poster-carousel-container');
 
-    if (posterTrack && posterPrev && posterNext) {
+    if (posterTrack && posterPrev && posterNext && posterContainer) {
         const scrollAmount = 300;
+        let isPaused = false;
+
+        // Pause on hover anywhere in container
+        posterContainer.addEventListener('mouseenter', () => {
+            isPaused = true;
+            posterTrack.style.animationPlayState = 'paused';
+        });
+
+        posterContainer.addEventListener('mouseleave', () => {
+            isPaused = false;
+            posterTrack.style.animationPlayState = 'running';
+        });
 
         posterNext.addEventListener('click', () => {
-            posterTrack.style.animation = 'none';
-            const currentTransform = getComputedStyle(posterTrack).transform;
-            const matrix = new DOMMatrix(currentTransform);
+            // Temporarily manipulate transform for visual feedback
+            const computedStyle = getComputedStyle(posterTrack);
+            const matrix = new DOMMatrix(computedStyle.transform);
             const currentX = matrix.m41;
             
+            posterTrack.style.animation = 'none';
             posterTrack.style.transform = `translateX(${currentX - scrollAmount}px)`;
             
             // Resume animation after a short delay
             setTimeout(() => {
                 posterTrack.style.transform = '';
-                posterTrack.style.animation = 'posterScroll 80s linear infinite';
+                posterTrack.style.animation = '';
+                if (isPaused) {
+                    posterTrack.style.animationPlayState = 'paused';
+                }
             }, 100);
         });
 
         posterPrev.addEventListener('click', () => {
-            posterTrack.style.animation = 'none';
-            const currentTransform = getComputedStyle(posterTrack).transform;
-            const matrix = new DOMMatrix(currentTransform);
+            const computedStyle = getComputedStyle(posterTrack);
+            const matrix = new DOMMatrix(computedStyle.transform);
             const currentX = matrix.m41;
             
+            posterTrack.style.animation = 'none';
             posterTrack.style.transform = `translateX(${currentX + scrollAmount}px)`;
             
             // Resume animation after a short delay
             setTimeout(() => {
                 posterTrack.style.transform = '';
-                posterTrack.style.animation = 'posterScroll 80s linear infinite';
+                posterTrack.style.animation = '';
+                if (isPaused) {
+                    posterTrack.style.animationPlayState = 'paused';
+                }
             }, 100);
         });
     }
