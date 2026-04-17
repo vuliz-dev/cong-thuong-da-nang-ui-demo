@@ -715,6 +715,126 @@ a {
     display: inline-block;
 }
 
+/* --- Poster Carousel --- */
+.promo-poster-section {
+    background: var(--gray-bg);
+    overflow: hidden;
+}
+
+.poster-carousel-container {
+    position: relative;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.poster-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.poster-carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: posterScroll 40s linear infinite;
+    width: fit-content;
+}
+
+.poster-carousel-container:hover .poster-carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes posterScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.poster-item {
+    flex-shrink: 0;
+    width: 280px;
+    height: 210px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.poster-item:hover {
+    transform: scale(1.03);
+}
+
+.poster-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.poster-item:hover .poster-overlay {
+    opacity: 1;
+}
+
+.poster-badge {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.poster-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+    color: var(--text-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.poster-nav:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.poster-prev {
+    left: 10px;
+}
+
+.poster-next {
+    right: 10px;
+}
+
 /* --- News Section --- */
 .news-grid {
     display: grid;
@@ -1090,5 +1210,16 @@ footer {
     }
     .hero-content h1 {
         font-size: 2rem;
+    }
+    .poster-carousel-container {
+        padding: 0 40px;
+    }
+    .poster-item {
+        width: 220px;
+        height: 165px;
+    }
+    .poster-nav {
+        width: 36px;
+        height: 36px;
     }
 }
