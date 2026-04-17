@@ -735,7 +735,7 @@ a {
 .poster-carousel-track {
     display: flex;
     gap: 20px;
-    animation: posterScroll 40s linear infinite;
+    animation: posterScroll 80s linear infinite;
     width: fit-content;
 }
 
