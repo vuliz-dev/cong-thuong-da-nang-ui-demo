@@ -130,6 +130,45 @@ document.addEventListener('DOMContentLoaded', () => {
     makeInfiniteSlider('category-slider', 'cat-prev', 'cat-next');
     makeInfiniteSlider('product-slider', 'prod-prev', 'prod-next');
 
+    // --- Poster Carousel with Manual Navigation ---
+    const posterTrack = document.querySelector('.poster-carousel-track');
+    const posterPrev = document.querySelector('.poster-prev');
+    const posterNext = document.querySelector('.poster-next');
+
+    if (posterTrack && posterPrev && posterNext) {
+        const scrollAmount = 300;
+
+        posterNext.addEventListener('click', () => {
+            posterTrack.style.animation = 'none';
+            const currentTransform = getComputedStyle(posterTrack).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            posterTrack.style.transform = `translateX(${currentX - scrollAmount}px)`;
+            
+            // Resume animation after a short delay
+            setTimeout(() => {
+                posterTrack.style.transform = '';
+                posterTrack.style.animation = 'posterScroll 40s linear infinite';
+            }, 100);
+        });
+
+        posterPrev.addEventListener('click', () => {
+            posterTrack.style.animation = 'none';
+            const currentTransform = getComputedStyle(posterTrack).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            posterTrack.style.transform = `translateX(${currentX + scrollAmount}px)`;
+            
+            // Resume animation after a short delay
+            setTimeout(() => {
+                posterTrack.style.transform = '';
+                posterTrack.style.animation = 'posterScroll 40s linear infinite';
+            }, 100);
+        });
+    }
+
     // Button interactions
     const cartBtn = document.querySelectorAll('.btn-add-cart');
     cartBtn.forEach(btn => {
