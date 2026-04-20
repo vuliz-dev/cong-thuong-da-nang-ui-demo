@@ -860,19 +860,15 @@ a {
     overflow: hidden;
 }
 
-.news-img-placeholder {
+.news-img img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-light) 0%, #FFE4D1 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.news-img-placeholder i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    opacity: 0.6;
+.news-card:hover .news-img img {
+    transform: scale(1.05);
 }
 
 .news-content {
