@@ -58,8 +58,8 @@
         <nav class="main-nav">
             <div class="container">
                 <ul>
-                    <li><a href="#" class="active">Trang chủ</a></li>
-                    <li><a href="#">Sản phẩm OCOP</a></li>
+                    <li><a href="index.html" class="active">Trang chủ</a></li>
+                    <li><a href="ocop-products.html">Sản phẩm OCOP</a></li>
                     <li><a href="#">Đặc sản vùng miền</a></li>
                     <li><a href="#">Thủ công mỹ nghệ</a></li>
                     <li><a href="#">Tin tức & Sự kiện</a></li>
@@ -74,7 +74,7 @@
         <section class="hero-slider" id="main-hero">
             <div class="hero-wrapper">
                 <!-- Slide 1 -->
-                <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('danangtrade_hero_premium_1776261057249.png');">
+                <div class="hero-slide active" style="background-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%), url('danangtrade_hero_premium_1776261057249.png');">
                     <div class="container">
                         <div class="hero-content">
                             <span class="badge">Sản phẩm tiêu biểu OCOP</span>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('media__1776260285239.png');">
+                <div class="hero-slide" style="background-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%), url('media__1776260285239.png');">
                     <div class="container">
                         <div class="hero-content">
                             <span class="badge">Khuyến mãi cực sốc</span>
@@ -154,18 +154,21 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Danh mục nổi bật</h2>
-                    <div class="slider-controls">
-                        <button class="slider-btn prev" id="cat-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="slider-btn next" id="cat-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="header-right-actions" style="display: flex; align-items: center; gap: 20px;">
+                        <a href="all-categories.html" class="view-all-btn">Xem tất cả <i class="fa-solid fa-grid-2"></i></a>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" id="cat-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn next" id="cat-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
                     </div>
                 </div>
                 <div class="category-slider-wrapper">
                     <div class="category-grid" id="category-slider">
-                        <div class="category-item">
-                            <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="category-item" onclick="location.href='ocop-products.html'" style="cursor: pointer;">
+                            <div class="icon-box"><i class="fa-solid fa-award"></i></div>
                             <span>Sản phẩm OCOP</span>
                         </div>
-                        <div class="category-item">
+                        <div class="category-item" onclick="location.href='ocop-category.html'" style="cursor: pointer;">
                             <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
                             <span>Thực phẩm - Đồ uống</span>
                         </div>
@@ -227,9 +230,9 @@
                 <div class="product-slider-wrapper">
                     <div class="product-grid" id="product-slider">
                         <!-- Product 1 -->
-                        <div class="product-card">
+                        <div class="product-card" onclick="location.href='product-detail.html'" style="cursor: pointer;">
                             <div class="product-img">
-                                <img src="/product-honey.jpg" alt="Mật ong rừng">
+                                <img src="public/product-honey.jpg" alt="Mật ong rừng">
                                 <span class="badge-ocop">OCOP 4★</span>
                             </div>
                             <div class="product-info">
@@ -252,7 +255,7 @@
                         <!-- Product 2 -->
                         <div class="product-card">
                             <div class="product-img">
-                                <img src="/product-tea.jpg" alt="Trà sen">
+                                <img src="public/product-tea.jpg" alt="Trà sen">
                                 <span class="badge-ocop">OCOP 5★</span>
                             </div>
                             <div class="product-info">
@@ -274,7 +277,7 @@
                         <!-- Product 3 -->
                         <div class="product-card">
                             <div class="product-img">
-                                <img src="/product-fish-sauce.jpg" alt="Nước mắm">
+                                <img src="public/product-fish-sauce.jpg" alt="Nước mắm">
                                 <span class="badge-ocop">OCOP 3★</span>
                             </div>
                             <div class="product-info">
@@ -296,7 +299,7 @@
                         <!-- Product 4 -->
                         <div class="product-card">
                             <div class="product-img">
-                                <img src="/product-cha-bo.jpg" alt="Chả bò">
+                                <img src="public/product-cha-bo.jpg" alt="Chả bò">
                                 <span class="badge-ocop">OCOP 4★</span>
                             </div>
                             <div class="product-info">
@@ -318,7 +321,7 @@
                         <!-- Product 5 -->
                         <div class="product-card">
                             <div class="product-img">
-                                <img src="/product-banh.jpg" alt="Bánh khô mè">
+                                <img src="public/product-banh.jpg" alt="Bánh khô mè">
                                 <span class="badge-ocop">OCOP 4★</span>
                             </div>
                             <div class="product-info">
@@ -478,6 +481,194 @@
                 <button class="poster-nav poster-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
+        
+        <!-- Most Popular Products Grid -->
+        <section class="popular-products section-padding">
+            <div class="container">
+                <div class="section-header center-header">
+                    <h2>Sản phẩm được quan tâm nhiều nhất</h2>
+                    <p class="subtitle">Khám phá các sản phẩm OCOP và đặc sản địa phương đang dẫn đầu xu hướng</p>
+                </div>
+                
+                <div class="trending-grid">
+                    <!-- Product 1 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1510850478920-64ad5467b3ca?w=400&h=300&fit=crop" alt="Rượu nếp cẩm">
+                            <span class="trending-badge hot">Bán chạy</span>
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Đồ uống</span>
+                            <h3>Rượu nếp cẩm Ái Lâm - Truyền thống 500ml</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Thành phần: Tinh bột gạo, Chất xơ, Vitamin B, Muối, Glucose...</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1627725841445-661767118274?w=400&h=300&fit=crop" alt="Cao lá Sâm Ngọc Linh">
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Thảo dược</span>
+                            <h3>Cao lá Sâm Ngọc Linh 250 - Tinh hoa núi rừng</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Khai thác từ đỉnh núi Ngọc Linh huyện Nam Trà My, cực kỳ bổ dưỡng.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="public/yen-sao.png" alt="Yến sào Tâm Đức">
+                            <span class="trending-badge gift">Quà tặng</span>
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Thực phẩm</span>
+                            <h3>Yến sào Tâm Đức - Cam kết 100% tự nhiên</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Yến thiên nhiên nguyên chất, đảm bảo vệ sinh an toàn thực phẩm.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1614749666991-6286529323ea?w=400&h=300&fit=crop" alt="Tổ yến Đà Nẵng">
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Thực phẩm</span>
+                            <h3>Tổ yến - Hai con yến Đà Nẵng Premium</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Với kinh nghiệm hơn 15 năm trong ngành yến sào tại Đà Nẵng.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=300&fit=crop" alt="Tổ yến Biển Việt">
+                            <span class="trending-badge">OCOP 5★</span>
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Thực phẩm</span>
+                            <h3>Tổ yến làm sạch 100g - Yến Biển Việt</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Yến đảo tự nhiên, đã qua sơ chế sạch lông và tạp chất.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1490885578174-acda8905c2c6?w=400&h=300&fit=crop" alt="Đông trùng hạ thảo">
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Sức khỏe</span>
+                            <h3>Nấm Đông trùng hạ thảo sấy khô Quỳnh Tâm</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Sản phẩm sấy thăng hoa, giữ trọn hàm lượng dinh dưỡng.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&h=300&fit=crop" alt="Chè dây Hòa Bắc">
+                            <span class="trending-badge">Hot</span>
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Đồ uống</span>
+                            <h3>Chè dây Hòa Bắc - Đặc sản Đà Nẵng</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Thảo dược quý từ vùng núi Hòa Bắc, tốt cho tiêu hóa.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1516714435131-44d6b64dc3a2?w=400&h=300&fit=crop" alt="Chả cá thát lát">
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Thực phẩm</span>
+                            <h3>Chả cá thát lát Vân Tới miếng lớn</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Đặc sản biển Đà Nẵng, dai ngon tự nhiên không chất bảo quản.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=300&fit=crop" alt="Tinh dầu tràm">
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Làm đẹp</span>
+                            <h3>Tinh dầu tràm Linh Ứng - 100% nguyên chất</h3>
+                            <p class="trending-price">Giá: <span>Liên hệ</span></p>
+                            <p class="trending-desc">Tinh dầu tràm tự nhiên, an toàn cho mọi lứa tuổi.</p>
+                            <div class="trending-actions">
+                                <button class="btn-outline">Gửi yêu cầu</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="trending-card">
+                        <div class="trending-img">
+                            <img src="https://images.unsplash.com/photo-1473679408190-0693dd22fe6a?w=400&h=300&fit=crop" alt="Tinh dầu Hi You Farm">
+                            <span class="trending-badge sale">-15%</span>
+                        </div>
+                        <div class="trending-info">
+                            <span class="category-tag">Chăm sóc</span>
+                            <h3>Tinh dầu thiên nhiên Hi You Farm</h3>
+                            <p class="trending-price">Giá: <span>70.000đ - 320.000đ</span></p>
+                            <p class="trending-desc">Sản phẩm tinh khiết chiết xuất 100% từ nông trại xanh.</p>
+                            <div class="trending-actions">
+                                <button class="btn-primary-card">ĐẶT HÀNG</button>
+                                <button class="btn-details"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- News Section -->
         <section class="news section-padding gray-bg">
@@ -489,7 +680,7 @@
                 <div class="news-grid">
                     <div class="news-card">
                         <div class="news-img">
-                            <img src="/news-ocop-fair.jpg" alt="Hội chợ OCOP">
+                            <img src="public/news-ocop-fair.jpg" alt="Hội chợ OCOP">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Sự kiện</span>
@@ -501,7 +692,7 @@
                     </div>
                     <div class="news-card">
                         <div class="news-img">
-                            <img src="/news-support.jpg" alt="Chương trình hỗ trợ">
+                            <img src="public/news-support.jpg" alt="Chương trình hỗ trợ">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Thông báo</span>
@@ -513,7 +704,7 @@
                     </div>
                     <div class="news-card">
                         <div class="news-img">
-                            <img src="/news-ocop-fair.jpg" alt="Sản phẩm OCOP 4 sao">
+                            <img src="public/news-ocop-fair.jpg" alt="Sản phẩm OCOP 4 sao">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Tin tức</span>

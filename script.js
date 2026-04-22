@@ -210,5 +210,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Product Detail Page Logic ---
+    
+    // Thumbnail switching
+    const thumbs = document.querySelectorAll('.thumb-item');
+    const mainImg = document.querySelector('.main-img-container img');
+    
+    if (thumbs.length > 0 && mainImg) {
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Update active state
+                thumbs.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                
+                // Update main image
+                const newSrc = thumb.querySelector('img').src;
+                mainImg.src = newSrc;
+            });
+        });
+    }
+
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelector('.tab-content'); // In a real app, there would be multiple content divs
+    
+    if (tabBtns.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // For demo purposes, we can just log the change or swap content if we had multiple divs
+                console.log(`Switched to tab: ${btn.innerText}`);
+            });
+        });
+    }
+
     console.log('Danangtrade UI Redesign Loaded Successfully.');
 });
